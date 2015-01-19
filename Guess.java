@@ -9,6 +9,11 @@ class Guess {
 		ch = (char) System.in.read(); // read a char from the keyboard
 
 		if (ch == answer) System.out.println("** Right **");
-		else System.out.println("...Sorry, you're wrong.");
+		else {
+			System.out.print("...Sorry, you're ");
+			// a nested if
+			if (ch < answer) System.out.println("too low");
+			else System.out.println("too high");
+		}
 	}
 }
